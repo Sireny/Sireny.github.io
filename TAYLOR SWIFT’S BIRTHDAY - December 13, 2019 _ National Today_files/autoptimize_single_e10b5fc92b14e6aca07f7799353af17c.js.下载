@@ -1,0 +1,6 @@
+(function(w,d,$){var gaLtEvt=('ontouchstart'in w)?'click':'mousedown';var gaLt=function gaLt(event){if(!('ga'in window)||!ga.hasOwnProperty('loaded')||ga.loaded!==true||(event.which!==1&&event.which!==2)){return;}
+var el=event.srcElement||event.target;while(el&&(typeof el.tagName=='undefined'||el.tagName.toLowerCase()!='a'||!el.href)){el=el.parentNode;}
+if(el&&el.href){var link=el.href;if(link.indexOf(location.host)==-1&&!link.match(/^javascript\:/i)){var target=(el.target&&!el.target.match(/^_(self|parent|top)$/i))?el.target:false;if(event.ctrlKey||event.shiftKey||event.metaKey||event.which==2){target="_blank";}
+var hbrun=false;var hitBack=function(){if(hbrun){return;}
+hbrun=true;window.location.href=link;};if(target){ga('send','event','Outgoing Links',link,document.location.pathname+document.location.search);}else{if(event.preventDefault){event.preventDefault();}else{event.returnValue=!1;}
+ga('send','event','Outgoing Links',link,document.location.pathname+document.location.search,{'hitCallback':hitBack});setTimeout(hitBack,1000);}}}};$(w).on('load',function(){$(d.body).on(gaLtEvt,gaLt);});}(window,document,jQuery));

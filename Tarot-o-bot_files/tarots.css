@@ -1,0 +1,144 @@
+/* COMMON STYLES*/
+html,
+body {
+    background-color: #000000;
+}
+
+#table_container {
+    padding-top: 10%;
+    margin: 0 auto;
+    /*  max-width: 1300px;*/
+}
+
+#particles-js {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 100%
+}
+
+#videos_table {
+    margin: 0 auto;
+}
+
+.flip-card {
+    perspective: 1000px;
+    margin-right: 2vw;
+    width: 21vw;
+    height: 40vw;
+    /* max-width: 400px;
+    max-height: 750px;*/
+}
+
+.flip-card img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.flip-card video {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    -webkit-transition: transform 0.8s;
+    -moz-transition: transform 0.8s;
+    -o-transition: transform 0.8s;
+    -ms-transition: transform 0.8s;
+
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.flip-card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front img {
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    
+}
+
+/* Style the back side */
+.flip-card-back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+
+.icons {
+    position: fixed;
+    z-index: 2;
+}
+
+
+/* -------------------------------------------------- */
+/* Small screens - MOBILE */
+@media only screen and (max-width: 40em) {
+    td {
+        display: block;
+    }
+
+    .flip-card {
+        margin-right: unset;
+        width: 63vw;
+        height: 120vw;
+    }
+
+    #table_container {
+        padding-top: 15%;
+    }
+}
+
+/* Medium screens - TABLET */
+/* min-width 641px and max-width 1024px */
+@media only screen and (min-width: 40.060em) and (max-width: 64em) {}
+
+
+
+/**********************/
+/* min-width 1024 and max-width 1440px*/
+/* Large screens - DESKTOP */
+@media only screen and (min-width: 64.060em) and (max-width: 90em) {
+    /* NOTHING HERE    */
+}
+
+/* XLarge screens min-width 1440px and max-width 1700px*/
+@media only screen and (min-width: 90.060em) and (max-width: 106.25em) {}
+
+/** XXLarge screens, more than 1700 px */
+@media only screen and (min-width: 106.31em) {}
