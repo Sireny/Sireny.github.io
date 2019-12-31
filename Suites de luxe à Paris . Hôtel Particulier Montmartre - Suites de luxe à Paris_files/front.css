@@ -1,0 +1,1 @@
+.js *.lazyload-bg:not([data-src]){background-image:none !important}.js .lazyload_effect .lazyload{opacity:0}.js .lazyload_effect .lazyload-loaded{opacity:1;-webkit-transition:opacity 0.3s ease-out;transition:opacity 0.3s ease-out}
